@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				left: 10px;
+				animation: abc 5s linear infinite  ;
+				
+			}
+			img{
+				height: 100%;
+				height: 100%;
+			}
+			.box:hover{
+				animation-play-state: paused;
+			}
+			@keyframes abc{
+				0%{left: 50px;}
+				40%{left: 1000px;transform: rotateY(0);}
+				50%{left: 1000px;transform: rotateY(180deg);}
+				90%{left: 50px;transform: rotateY(180deg);}
+				100%{left: 50px;transform: rotateY(180deg);}
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/u=4216508570,2375646332&fm=200&gp=0.jpg">
+		</div>
+	</body>
+</html>

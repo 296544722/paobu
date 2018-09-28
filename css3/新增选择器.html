@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			[data-pp]{
+				color: red;
+			}
+			[data-pp="p1"]{
+				
+				font-size: 30px;
+			}
+			[data-pp^="d"]{
+				
+				color: rosybrown;
+			}
+			[data-pp$="5"]{
+				font-size: 50px;
+			}
+			[data-pp*="c"]{
+				color: brown;
+			}
+			[data-pp="pc4"]+p{
+				
+				background: red;
+			}
+			[data-pp="pc4"]~p{
+				
+				background: yellow;
+			}
+			p:not([data-pp="d3"]){
+				font-family: "微软雅黑";
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<p data-pp = "p1">1111</p>
+		<p data-pp = "d2">2222</p>
+		<p data-pp = "d3">3333</p>
+		<p data-pp = "pc4">4444</p>
+		<p data-pp = "pc5">5555</p>
+		<p data-pp = "p6">6666</p>
+	</body>
+</html>

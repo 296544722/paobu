@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.obox{
+				width: 200px;
+			height: 200px;
+			margin: 200px auto;
+			position: relative;
+			border: solid 1px;
+			transform-origin: 0px 0px;
+			transform: rotate(0deg);
+			transition: all 2s;
+			}
+			.box{
+				width: 0;
+				height: 0;
+				border:solid 180px transparent;
+				border-top:solid 100px red;
+				position: relative;
+				transform: translate(180px,180px);
+				transition: all 2s;
+				
+			}
+			.box:after{
+				width: 0;
+				height: 0;
+				content: "";
+				border:solid 180px transparent;
+				border-top:solid 100px black;
+				position: absolute;
+				left: 200px;
+				transform: rotate(81deg) translate(-234px,438px);
+				
+			}
+			.box:before{
+				content: "";
+				width: 0;
+				height: 0;
+				border:solid 180px transparent;
+				border-top:solid 100px saddlebrown;
+				position: absolute;
+				left: 200px;
+				transform: rotate(-70deg) translate(35px,-321px);
+			}
+			.obox:hover{
+				transform: rotate(-1080deg);
+			}
+			.obox:hover .box{
+				transform: scale(0.2,0.2);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="obox">
+		<div class="box"></div>
+		</div>
+	</body>
+</html>
